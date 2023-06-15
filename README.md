@@ -45,7 +45,10 @@ REDIS_URL=
 REDIS_SECRET=
 ```
 
-if you'd like, you can paste this snippet into your typescriptreact.json for quick component creation (optional):
+if you'd like, you can paste this snippet for quick component creation (optional):
+```typescript
+// settings -> user snippets _> typescriptreact.json
+```
 
 ```json
 "Typescript React Function Component": {
