@@ -4,9 +4,6 @@
 Built with the Next.js App Router, TypeScript & Tailwind
 
 
-![Thumbnail](https://uploadthing.com/f/6227b383-132b-4de8-8e0d-7c63b1ed16cd_thumbnail-Recovered-alt.png)
-
-
 ## Features
 
  - Infinite scrolling for dynamically loading posts
