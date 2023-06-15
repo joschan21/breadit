@@ -47,7 +47,7 @@ REDIS_SECRET=
 
 if you'd like, you can paste this snippet for quick component creation (optional):
 ```typescript
-// settings -> user snippets _> typescriptreact.json
+// vscode settings -> user snippets -> typescriptreact.json
 ```
 
 ```json
