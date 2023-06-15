@@ -75,6 +75,6 @@ and that's all you need to get started!
 
 ## Acknowledgements
 
-- [Upstash Redis](https://upstash.com/?utm_source=Josh2)
+- [Upstash Redis](https://upstash.com/?utm_source=Josh2) for making this possible
 - [Code with Antonio](https://www.youtube.com/@codewithantonio) for thumbnail design inspiration
 - Shadcn's [Taxonomy respository](https://github.com/shadcn/taxonomy) for showcasing the post editor
