@@ -44,6 +44,29 @@ UPLOADTHING_APP_ID=
 REDIS_URL=
 REDIS_SECRET=
 ```
+
+if you'd like, you can paste this snippet into your typescriptreact.json for quick component creation (optional):
+
+```json
+"Typescript React Function Component": {
+    "prefix": "fc",
+    "body": [
+      "import { FC } from 'react'",
+      "",
+      "interface ${TM_FILENAME_BASE}Props {",
+      "  $1",
+      "}",
+      "",
+      "const $TM_FILENAME_BASE: FC<${TM_FILENAME_BASE}Props> = ({$2}) => {",
+      "  return <div>$TM_FILENAME_BASE</div>",
+      "}",
+      "",
+      "export default $TM_FILENAME_BASE"
+    ],
+    "description": "Typescript React Function Component"
+  },
+  ```
+
 and that's all you need to get started!
 
 
