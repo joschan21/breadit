@@ -1,8 +1,11 @@
 import { Icons } from '@/components/Icons'
 import UserAuthForm from '@/components/UserAuthForm'
 import Link from 'next/link'
+import {useRouter} from 'next/navigation';
 
 const SignUp = () => {
+  const router = useRouter();
+
   return (
     <div className='container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]'>
       <div className='flex flex-col space-y-2 text-center'>
@@ -18,7 +21,11 @@ const SignUp = () => {
         Already a Breadditor?{' '}
         <Link
           href='/sign-in'
-          className='hover:text-brand text-sm underline underline-offset-4'>
+          className='hover:text-brand text-sm underline underline-offset-4'
+          onClick={(e) => {
+            e.preventDefault();
+            router.replace('/sign-in');
+          }}>
           Sign in
         </Link>
       </p>
