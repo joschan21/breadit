@@ -1,11 +1,16 @@
 "use client";
 
+import { FC } from 'react'
 import { Icons } from '@/components/Icons'
 import UserAuthForm from '@/components/UserAuthForm'
 import Link from 'next/link'
-import {useRouter} from 'next/navigation';
+import {useRouter} from 'next/navigation'
 
-const SignUp = () => {
+interface SignUpProps {
+  isModal?: boolean;
+}
+
+const SignUp: Fc<SignUpProps> = ({ isModal = false }) => {
   const router = useRouter();
 
   return (
@@ -26,7 +31,11 @@ const SignUp = () => {
           className='hover:text-brand text-sm underline underline-offset-4'
           onClick={(e) => {
             e.preventDefault();
-            router.replace('/sign-in');
+            if(isModal) {
+              router.replace('/sign-in');
+            } else {
+              router.push('/sign-in');
+            }
           }}>
           Sign in
         </Link>
