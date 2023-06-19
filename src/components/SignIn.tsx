@@ -4,15 +4,12 @@ import { FC } from 'react'
 import { Icons } from '@/components/Icons'
 import UserAuthForm from '@/components/UserAuthForm'
 import Link from 'next/link'
-import {useRouter} from 'next/navigation';
 
 interface SignInProps {
   isModal?: boolean;
 }
 
 const SignIn: FC<SignInProps> = ({ isModal = false }) => {
-  const router = useRouter();
-
   return (
     <div className='container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]'>
       <div className='flex flex-col space-y-2 text-center'>
@@ -29,14 +26,8 @@ const SignIn: FC<SignInProps> = ({ isModal = false }) => {
         <Link
           href='/sign-up'
           className='hover:text-brand text-sm underline underline-offset-4'
-          onClick={(e) => {
-            e.preventDefault();
-            if(isModal) {
-              router.replace('/sign-up');
-            } else {
-              router.push('/sign-up');
-            }
-          }}>
+          replace={isModal}
+          }>
           Sign Up
         </Link>
       </p>
