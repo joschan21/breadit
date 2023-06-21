@@ -103,7 +103,7 @@ const CommentVotes: FC<CommentVotesProps> = ({
           'text-emerald-500': currentVote?.type === 'DOWN',
         })}
         variant='ghost'
-        aria-label='upvote'>
+        aria-label='downvote'>
         <ArrowBigDown
           className={cn('h-5 w-5 text-zinc-700', {
             'text-red-500 fill-red-500': currentVote?.type === 'DOWN',
