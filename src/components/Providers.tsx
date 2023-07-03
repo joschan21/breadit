@@ -8,9 +8,9 @@ interface LayoutProps {
   children: ReactNode
 }
 
-const Providers: FC<LayoutProps> = ({ children }) => {
-  const queryClient = new QueryClient()
+const queryClient = new QueryClient()
 
+const Providers: FC<LayoutProps> = ({ children }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <SessionProvider>{children}</SessionProvider>
