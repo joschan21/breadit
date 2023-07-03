@@ -75,3 +75,7 @@ and that's all you need to get started!
 - [Upstash Redis](https://upstash.com/?utm_source=Josh2) for making this possible
 - [Code with Antonio](https://www.youtube.com/@codewithantonio) for thumbnail design inspiration
 - Shadcn's [Taxonomy respository](https://github.com/shadcn/taxonomy) for showcasing the post editor
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
