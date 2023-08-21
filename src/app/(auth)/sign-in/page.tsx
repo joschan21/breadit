@@ -2,6 +2,7 @@ import { buttonVariants } from '@/components/ui/Button'
 import { FC } from 'react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
+import SignIn from '@/components/SignIn'
 
 
 const page: FC = () => {
