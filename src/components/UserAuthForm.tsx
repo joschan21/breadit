@@ -29,7 +29,7 @@ const UserAuthForm = () => {
         } finally {
             setIsLoading(false)
         }
-    }
+    };
 
     return (
         <div className='flex justify-center'>
