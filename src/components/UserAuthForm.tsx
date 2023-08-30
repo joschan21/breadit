@@ -6,19 +6,26 @@ import { Button } from './ui/Button'
 import { cn } from '@/lib/utils'
 import { signIn } from 'next-auth/react';
 import { Icons } from './Icons';
+import { useToast } from '@/hooks/use-toast';
 
 
 const UserAuthForm = () => {
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const { toast } = useToast();
 
     const loginWithGoogle = async () => {
         setIsLoading(true);
 
         try {
+            throw new Error();
             await signIn('google')
         } catch (error) {
-
+            toast({
+                title: 'There was a problem.',
+                description: 'There was an error logging in with Google',
+                variant: 'destructive',
+            })
         } finally {
             setIsLoading(false)
         }
