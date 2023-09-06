@@ -44,7 +44,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
 
-  username? string? @unique
+  username         String?   @unique
 
   image    String?
   accounts Account[]

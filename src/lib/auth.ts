@@ -1,4 +1,4 @@
-import { NextAuthOptions } from "next-auth";
+import { NextAuthOptions, getServerSession } from "next-auth";
 import { db } from "./db";
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import GoogleProvider from "next-auth/providers/google";
@@ -7,10 +7,10 @@ import { nanoid } from 'nanoid';
 export const authOptions: NextAuthOptions = {
     adapter: PrismaAdapter(db),
     session: {
-        strategy: 'jwt'
+        strategy: 'jwt',
     },
     pages: {
-        signIn: '/sign-in'
+        signIn: '/sign-in',
     },
     providers: [
         GoogleProvider({
@@ -60,7 +60,12 @@ export const authOptions: NextAuthOptions = {
                 picture: dbUser.image,
                 username: dbUser.username,
             }
+        },
+        redirect() {
+            return '/'
         }
     },
 
 }
+
+export const getAuthSession = () => getServerSession(authOptions)
