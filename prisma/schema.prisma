@@ -43,7 +43,7 @@ model User {
   name              String?
   email             String?     @unique
   emailVerified     DateTime?
-  createdSubreddits Subreditt[] @relation("CreatedBy")
+  createdSubreddits Subreddit[] @relation("CreatedBy")
 
   username String? @unique
 
@@ -57,7 +57,7 @@ model User {
   Subscription Subscription[]
 }
 
-model Subreditt {
+model Subreddit {
   id        String   @id @default(cuid())
   name      String   @unique
   createdAt DateTime @default(now())
@@ -74,7 +74,7 @@ model Subreditt {
 model Subscription {
   user        User      @relation(fields: [userId], references: [id])
   userId      String
-  subreddit   Subreditt @relation(fields: [subredditId], references: [id])
+  subreddit   Subreddit @relation(fields: [subredditId], references: [id])
   subredditId String
 
   @@id([userId, subredditId])
@@ -86,7 +86,7 @@ model Post {
   content     Json?
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
-  subreditt   Subreditt @relation(fields: [subredittId], references: [id])
+  subreditt   Subreddit @relation(fields: [subredittId], references: [id])
   subredittId String
 
   author   User   @relation(fields: [authorId], references: [id])
