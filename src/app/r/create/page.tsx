@@ -27,7 +27,7 @@ const Page = () => {
         },
         onError: (err) => {
             if (err instanceof AxiosError) {
-                if (err.response?.status === 400) {
+                if (err.response?.status === 409) {
                     return toast({
                         title: 'subreddit already exists.',
                         description: 'Please choose a different subreddit name.',

@@ -3,6 +3,7 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": [
     "Autosize",
+    "hgetall",
     "hset"
   ]
 }
